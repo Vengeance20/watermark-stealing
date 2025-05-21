@@ -29,7 +29,7 @@ def main(cfg_path: str) -> None:
             model = "llama" if "llama" in cfg.meta.out_root_dir else "mistral"
             run = neptune.init_run(
                 project=cfg.meta.neptune_project,
-                api_token=os.environ["eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiIzNDg2MGQ4My1lMjlhLTQzZmMtOTk4Ni1mZGQ5ZWVmMzI3ZGMifQ=="],
+                api_token=os.environ["NEPTUNE_API_TOKEN"],
                 name=f"{mode}-{model}",
                 monitoring_namespace="monitoring-namespace",
             )  # your credentials
