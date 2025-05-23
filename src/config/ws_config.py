@@ -119,6 +119,7 @@ class ModelConfig(PBMwODP, arbitrary_types_allowed=True):  # type: ignore
     n_beams: int = Field(1, description="Number of beams for beam search")
     use_sampling: bool = Field(False, description="Use multinomial sampling instead of greedy")
     sampling_temp: float = Field(0.7, description="Temperature for multinomial sampling")
+    device_map = None
 
     def short_str(self) -> str:
         return f"name={self.name},n_beams={self.n_beams},sample={self.use_sampling},temp={self.sampling_temp}"
