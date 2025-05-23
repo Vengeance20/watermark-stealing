@@ -74,7 +74,7 @@ class HfModel:
         else:
             raise ValueError(f"Unknown model name: {self.cfg.name}")
 
-        if self.device == "cuda" and not self.cfg.device_map:
+        if self.device == "cuda" and self.cfg.device_map is None:
             self.model.to("cuda")
         self.model.eval()
 
