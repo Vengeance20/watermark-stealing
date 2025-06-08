@@ -7,7 +7,7 @@ $HOME/miniforge3/bin/conda update -n base -c conda-forge conda
 
 cd watermark-stealing
 conda env create -f env.yaml
-conda activate ws
+conda activate ws1
 
 # Install Flash attention (good luck)
 pip install -U flash-attn --no-build-isolation
