@@ -95,7 +95,7 @@ class MetaConfig(PBMwODP, extra="forbid"):  # type: ignore
     device: str = Field(..., description="Device to run on (cuda/cpu)")
     use_neptune: bool = Field(False, description="If neptune should be used")
     neptune_project: str = Field(
-        "ORG/PROJ", description="Neptune project name; replace with your project if using neptune"
+        "minh20/Minh", description="Neptune project name; replace with your project if using neptune"
     )
     seed: int = Field(
         ..., description="Seed, applied before every unwatermarked/watermark generate call"
