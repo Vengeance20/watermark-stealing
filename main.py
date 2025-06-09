@@ -15,6 +15,8 @@ from src.gradio import run_gradio
 from src.server import Server
 from src.utils import create_open
 
+from getpass import getpass
+os.environ["NEPTUNE_API_TOKEN"] = 'eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiIzNDg2MGQ4My1lMjlhLTQzZmMtOTk4Ni1mZGQ5ZWVmMzI3ZGMifQ=='
 
 def main(cfg_path: str) -> None:
     cfgs = get_pydantic_models_from_path(cfg_path)
